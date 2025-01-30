@@ -5,6 +5,7 @@ This is a fun little project to practice using React Router, initially as Remix.
 ## Tech Stack
 - React-Router V7
 - Tailwind V4
+- PG container in Docker
 
 ## Features
 
@@ -30,6 +31,12 @@ Install the dependencies:
 
 ```bash
 npm install
+```
+
+Run the docker container (Install docker):
+
+```bash
+docker-compose up -d
 ```
 
 ### Development

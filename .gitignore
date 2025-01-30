@@ -6,3 +6,8 @@
 /build/
 
 notes.md
+
+# docker
+postgres-data/
+# env files
+.env
