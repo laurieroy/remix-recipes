@@ -5,7 +5,8 @@ This is a fun little project to practice using React Router, initially as Remix.
 ## Tech Stack
 - React-Router V7
 - Tailwind V4
-- PG container in Docker
+- PG container in Docker with prisma ORM
+
 
 ## Features
 
