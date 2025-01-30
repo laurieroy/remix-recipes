@@ -103,7 +103,7 @@ function AppNavLink({ children, to }: AppNavLinkProps) {
           <div
             className={`py-4 flex justify-center hover:bg-(--color-primary-light) ${
               isActive ? "bg-(--color-primary-light)" : ""
-            }`}
+            } ${isPending ? "bg-(--color-primary-light) animate-pulse" : ""}`}
           >
             {children}
           </div>
