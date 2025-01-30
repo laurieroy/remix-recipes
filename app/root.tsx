@@ -10,8 +10,13 @@ import {
 
 import type { Route } from "./+types/root";
 // import styles from "./app.css?url";
-import "./app.css"
-
+import "./app.css";
+import {
+  HomeIcon,
+  DiscoverIcon,
+  RecipeBookIcon,
+  SettingsIcon,
+} from "./components/icons";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -46,7 +51,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="md:flex md:h-screen">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -58,14 +63,53 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/discover">Discover</NavLink>
-        <NavLink to="/app">App</NavLink>
-        <NavLink to="/settings">Settings</NavLink>
+      <nav className="bg-(--color-primary) text-white">
+        <ul className="flex md:flex-col">
+          <AppNavLink to="/">
+            <HomeIcon />
+          </AppNavLink>
+
+          <AppNavLink to="/discover">
+            <DiscoverIcon />
+          </AppNavLink>
+
+          <AppNavLink to="/app">
+            <RecipeBookIcon />
+          </AppNavLink>
+
+          <AppNavLink to="/settings">
+            <SettingsIcon />
+          </AppNavLink>
+        </ul>
       </nav>
-      <Outlet />
+
+      <div className="p-4 w-full">
+        <Outlet />
+      </div>
     </>
+  );
+}
+
+type AppNavLinkProps = {
+  children: React.ReactNode;
+  to: string;
+};
+
+function AppNavLink({ children, to }: AppNavLinkProps) {
+  return (
+    <li className="w-16">
+      <NavLink to={to}>
+        {({ isActive, isPending }) => (
+          <div
+            className={`py-4 flex justify-center hover:bg-(--color-primary-light) ${
+              isActive ? "bg-(--color-primary-light)" : ""
+            }`}
+          >
+            {children}
+          </div>
+        )}
+      </NavLink>
+    </li>
   );
 }
 

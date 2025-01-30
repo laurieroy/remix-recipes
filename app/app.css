@@ -3,6 +3,8 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-primary: #00743e;
+  --color-primary-light: #4c9d77;
 }
 
 html,
@@ -12,8 +14,4 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
-}
-h1 {
-  color: blue;
-  font-size: 2rem;
 }

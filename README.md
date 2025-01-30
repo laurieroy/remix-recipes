@@ -1,8 +1,10 @@
-# Welcome to React Router!
+# Welcome to Remix Recipes!
 
-A modern, production-ready template for building full-stack React applications using React Router.
+This is a fun little project to practice using React Router, initially as Remix. The original tutorial is form Zach Taylor at ZTM.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Tech Stack
+- React-Router V7
+- Tailwind V4
 
 ## Features
 
@@ -17,6 +19,12 @@ A modern, production-ready template for building full-stack React applications u
 ## Getting Started
 
 ### Installation
+
+Download the app:
+
+```bash
+git clone git@github.com:laurieroy/remix-recipes.git
+```
 
 Install the dependencies:
 
